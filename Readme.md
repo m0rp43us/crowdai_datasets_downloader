@@ -1,4 +1,4 @@
-Small script that uploads all of ai-crowd datasets into anonfiles,had a hard time finding all the files i needed for another project after crowdAI posted that they were shutting down,some original datasets had been migrated to the new website but all the other ones has only been in the old website's static files container,thought this script would be helpful
+Small script that uploads all of ai-crowd datasets into anonfiles,had a hard time finding all the files i needed for another project after crowdAI posted that they were shutting down,some original datasets had been migrated to the new website but all the other ones have only been in the old website's container,thought this script would be helpful
 
 list of links :
 
