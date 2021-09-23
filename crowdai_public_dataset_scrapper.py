@@ -88,23 +88,21 @@ fp.set_preference("browser.download.dir", dir)
 fp.set_preference("profile.default_content_setting_values.automatic_downloads",1)
 
 
-#for key in data:
-#    if len(data[key])!=0:
-#        browser = webdriver.Firefox(executable_path=GeckoDriverManager().install(),firefox_profile=fp)
-#        browser.maximize_window()
-#        print(key, '->', data[key][0])
-#        browser.get(download_url+data[key][0])
-#        time.sleep(3)   
-#        browser.refresh()
-#        print(glob.glob(dir+"*"))
-#        file = glob.glob(dir+"*")[0]
-#        upload = anon.upload(file, progressbar=True)
-#        print(upload.url.geturl())
-#        data[key].append(upload.url.geturl())
-#        for f in os.listdir(dir):
-#            os.remove(os.path.join(dir, f))
-
-#json_object = json.dumps(data)
+for key in data:
+    if len(data[key])!=0:
+        browser = webdriver.Firefox(executable_path=GeckoDriverManager().install(),firefox_profile=fp)
+        browser.maximize_window()
+        print(key, '->', data[key][0])
+        browser.get(download_url+data[key][0])
+        time.sleep(3)   
+        browser.refresh()
+        print(glob.glob(dir+"*"))
+        file = glob.glob(dir+"*")[0]
+        upload = anon.upload(file, progressbar=True)
+        print(upload.url.geturl())
+        data[key].append(upload.url.geturl())
+        for f in os.listdir(dir):
+            os.remove(os.path.join(dir, f))
 
 with open(dir+'data.json', 'w') as outfile:
     json.dump(data, outfile)
